@@ -15,6 +15,7 @@ CHAPPIEUI ChappieUI;
 
 void setup()
 {
+    delay(1000);
     ChappieUI.begin();
 }
 

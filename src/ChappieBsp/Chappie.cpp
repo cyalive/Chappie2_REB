@@ -59,17 +59,17 @@ void verbose_print_reset_reason(int reason)
 void CHAPPIE::init()
 {
     /* Init I2C */
-    Wire.begin(5, 4);
+    Wire.begin(11, 12);
     Wire.setClock(400000);
     // delay(3000);
     /* Init power contrl */
-    delay(30);
-    Pow.init();
+    // delay(30);
+    // Pow.init();
     
     // delay(3000);
 
     /* Init RGB led */
-    FastLED.showColor(CRGB::Red, 5);
+    //FastLED.showColor(CRGB::Red, 5);
     /* Init lcd */
     Lcd.init();
     Lcd.setFont(&fonts::efontCN_12);
@@ -97,20 +97,20 @@ void CHAPPIE::init()
     /* Init RTC */
     Rtc.begin();
     /* Init IMU */
-    Imu.init();
+    // Imu.init();
     /* Init SD card */
     Sd.init();
     
     /* Init BMP280 */
-    Env.init();
+    // Env.init();
     
     
     /* Fire up */
     Speaker.setVolume(50);
     Speaker.tone(9000, 300);
-    Vibrator.Buzzzzz(300);
+    // Vibrator.Buzzzzz(300);
     
-    FastLED.showColor(CRGB::Black);
+    //FastLED.showColor(CRGB::Black);
     #ifdef DEBUG_CPU 
         print_reset_reason(rtc_get_reset_reason(0));
         verbose_print_reset_reason(rtc_get_reset_reason(0));

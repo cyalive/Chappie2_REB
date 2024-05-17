@@ -13,10 +13,10 @@
 #include <FS.h>
 #include <SD.h>
 
-#define CHAPPIE_SD_PIN_MISO     42
-#define CHAPPIE_SD_PIN_MOSI     41
-#define CHAPPIE_SD_PIN_CLK      40
-#define CHAPPIE_SD_PIN_CS       48
+#define CHAPPIE_SD_PIN_MISO     16
+#define CHAPPIE_SD_PIN_MOSI     6
+#define CHAPPIE_SD_PIN_CLK      15
+#define CHAPPIE_SD_PIN_CS       5
 
 class ChappieSD {
     private:

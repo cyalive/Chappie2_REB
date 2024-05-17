@@ -116,7 +116,7 @@ void Game::_stop() {
     _drawGameOver();
     // _sfx->playScore(SFX_GAME_OVER);
     // espboy.pixel.flash(Color::hsv2rgb(0), 50, 3, 200);
-    _device->Vibrator.Buzzzzz(300);
+    // _device->Vibrator.Buzzzzz(300);
 
 }
 

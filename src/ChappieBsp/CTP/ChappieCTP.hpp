@@ -14,7 +14,7 @@
 
 /* Configs */
 #define CTP_DEV_ADDR            0x15
-#define CTP_INT_PIN             21
+#define CTP_INT_PIN             3
 
 #define CTP_HORIZON
 // #define CTP_PORTRAIT
@@ -22,7 +22,7 @@
 #ifdef CTP_HORIZON
     #define CTP_REVERS_XPOS     0
     #define CTP_REVERS_YPOS     1
-    #define CTP_REVERS_XY       1
+    #define CTP_REVERS_XY       0
 #else
 #ifdef CTP_PORTRAIT
     #define CTP_REVERS_XPOS     0

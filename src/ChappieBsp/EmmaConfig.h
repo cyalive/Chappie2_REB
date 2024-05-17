@@ -29,17 +29,17 @@
 
 /* Enable module RGB led */
 /* Require: https://github.com/FastLED/FastLED.git */
-#define EMMA_MODULE_RGB_LED             1
+#define EMMA_MODULE_RGB_LED             0
 #if EMMA_MODULE_RGB_LED
-    #define EMMA_RGBLED_PIN             14
+    #define EMMA_RGBLED_PIN             -1
     #define EMMA_RGBLED_NUM             1
 #endif
 
 
 /* Enable module Buzzer */
-#define EMMA_MODULE_BUZZER              0
+#define EMMA_MODULE_BUZZER              1
 #if EMMA_MODULE_BUZZER
-    #define EMMA_BUZZER_PIN             -1
+    #define EMMA_BUZZER_PIN             46
     #define EMMA_BUZZER_MELODY          1
     #define EMMA_BUZZER_MELODY_MSG      1
     #define EMMA_BUZZER_MELODY_MUSIC    1
@@ -51,8 +51,8 @@
 /* https://github.com/m5stack/M5Unified/blob/master/src/utility/Mic_Class.hpp */
 #define EMMA_MODULE_MIC_PDM             1
 #if EMMA_MODULE_MIC_PDM
-    #define EMMA_MICPDM_CLK_PIN         6
-    #define EMMA_MICPDM_DATA_PIN        7
+    #define EMMA_MICPDM_CLK_PIN         1
+    #define EMMA_MICPDM_DATA_PIN        2
     #define EMMA_MICPDM_I2S_PORT        I2S_NUM_0
     /* More configs in Mic/EmmaMicPDM.hpp */
 #endif
@@ -73,9 +73,9 @@
 
 /* Enable module Vibrator */
 /* Simple viration motor control with ledc pwm */
-#define EMMA_MODULE_VIBRATOR            1
+#define EMMA_MODULE_VIBRATOR            0
 #if EMMA_MODULE_VIBRATOR
-    #define EMMA_VIBRATOR_PIN           46
+    #define EMMA_VIBRATOR_PIN           -1
 #endif
 
 
@@ -85,12 +85,12 @@
 /* Only wraped I2S mode so far */
 #define EMMA_MODULE_SPEAKER             1
 #if EMMA_MODULE_SPEAKER
-    #define EMMA_SPEAKER_DATA_PIN       17
-    #define EMMA_SPEAKER_BCLK_PIN       16
-    #define EMMA_SPEAKER_LRCLK_PIN      15
+    #define EMMA_SPEAKER_DATA_PIN       7
+    #define EMMA_SPEAKER_BCLK_PIN       18
+    #define EMMA_SPEAKER_LRCLK_PIN      8
     #define EMMA_SPEAKER_I2S_PORT       I2S_NUM_1
     /* Pin to shut down the speaker */
-    #define EMMA_SPEAKER_ENABLE_PIN     3
+    #define EMMA_SPEAKER_ENABLE_PIN     4
     /* More configs in Speaker/EmmaSpeaker.hpp */
 #endif
 

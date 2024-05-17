@@ -179,7 +179,7 @@ void Game_EatFood_CallBack()
 
 void Game_Died_CallBack()
 {
-    Device->Vibrator.Buzzzzz(100);
+    // Device->Vibrator.Buzzzzz(100);
 }
 
 // ------------------------------------------------------------------ //
