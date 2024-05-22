@@ -6,7 +6,7 @@
  * @date 2023-03-10
  * 
  * @copyright Copyright (c) 2023
- * 
+ * [BLEAdvertising.cpp:522] handleGAPEvent(): STOP advertising
  */
 #pragma once
 #include "Arduino.h"
@@ -22,7 +22,7 @@
 #ifdef CTP_HORIZON
     #define CTP_REVERS_XPOS     0
     #define CTP_REVERS_YPOS     1
-    #define CTP_REVERS_XY       0
+    #define CTP_REVERS_XY       1
 #else
 #ifdef CTP_PORTRAIT
     #define CTP_REVERS_XPOS     0
@@ -100,7 +100,7 @@ class ChappieCTP {
             _enable = true;
 
             /* Shut down auto sleep */
-            // _I2C_write1Byte(0xFE, 0xFF);
+            //_I2C_write1Byte(0xFE, 0xFF);
             _I2C_write1Byte(0xFE, 0x07);
             printf("[CTP] auto sleep shut down\n");
 

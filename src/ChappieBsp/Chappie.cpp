@@ -64,7 +64,7 @@ void CHAPPIE::init()
     // delay(3000);
     /* Init power contrl */
     // delay(30);
-    // Pow.init();
+    Pow.init();
     
     // delay(3000);
 
@@ -81,19 +81,21 @@ void CHAPPIE::init()
         delay(1);
     }
     // Lcd.printf("%s", Logo);
-    // delay(50);
+     // delay(3000);
     Lcd.printf("\n ChappieBSP %s :)\n Author: Forairaaaaa\n", EMMA_BSP_VERISON);
-    // delay(50);
+    // delay(3000);
     Lcd.printf(" Project: %s\n", EMMA_PROJECT_NAME);
     // Lcd.printf(" IIC Num: %d\n", num);
-    // delay(50);
+    // delay(3000);
     Tp.init(&Wire);
 
     /* Init touchpad */
     Lcd.printf("%s", Cowsay("Pls touch screen to wakeup Tp").c_str());
     
     Lcd.printf("Tp init success!\n");
+
     Wf.Init();
+    // delay(5000);
     /* Init RTC */
     Rtc.begin();
     /* Init IMU */

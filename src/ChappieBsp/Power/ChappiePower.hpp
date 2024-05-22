@@ -49,14 +49,14 @@ class ChappiePower {
                 bool AXPInit = pmu.begin();
                 Serial.println(AXPInit ? "AXP Init succes!" : "AXP Init Failed!");
                 // pmu.setChargeCurrent(pmu.CHG_700mA);//设置充电电流
-                pmu.setOutputEnable(pmu.OP_LDO2,true);
-                pmu.setOutputVoltage(pmu.OP_LDO2,2000);
-                pmu.setOutputEnable(pmu.OP_LDO3,true);
-                pmu.setOutputVoltage(pmu.OP_LDO3,2000);
+                // pmu.setOutputEnable(pmu.OP_LDO2,true);
+                // pmu.setOutputVoltage(pmu.OP_LDO2,2000);
+                // pmu.setOutputEnable(pmu.OP_LDO3,true);
+                // pmu.setOutputVoltage(pmu.OP_LDO3,2000);
                 
                 // pmu.setOutputVoltage(pmu.OP_LDO2,3000);
                 // 注意不设置是无法生效的,即使你使用了获取电流函数
-                pmu.setADCEnable(pmu.ADC_TS,false); //设置TS管脚ADC进行检测电池温度状态  
+                pmu.setADCEnable(pmu.ADC_TS,true); //设置TS管脚ADC进行检测电池温度状态  
                 pmu.setADCEnable(pmu.ADC_BAT_C,true); //设置电池管脚ADC进行检测电池电流状态
                 pmu.setADCEnable(pmu.ADC_BAT_V,true); //设置电池管脚ADC进行检测电池电压状态
                 pmu.setADCEnable(pmu.ADC_VBUS_C,true); //设置USB管脚ADC进行检测USB电流状态
