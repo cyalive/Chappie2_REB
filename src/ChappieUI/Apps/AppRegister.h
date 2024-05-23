@@ -36,7 +36,7 @@
 #include "App_StupidSnake/App_StupidSnake.h"
 #include "App_Watch/App_Watch.h"
 #include "App_Settings/App_Settings.h"
-#include "App_Dino/App_Dino.h"
+// #include "App_Dino/App_Dino.h"
 #include "App_FFT/App_FFT.h"
 #include "App_ESPNOW/App_ESPNOW.h"
 #include "App_WifiTV/App_WifiTV.h"
@@ -66,7 +66,7 @@ namespace App {
 		App_Login(Synology),
 		App_Login(ChatGPT),
 		App_Login(StupidSnake),
-		App_Login(Dino),
+		// App_Login(Dino),
 		App_Login(FFT),
 		App_Login(ESPNOW),
 		App_Login(WifiTV),
